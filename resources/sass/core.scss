@@ -1,0 +1,426 @@
+    @import './base/bootstrap';
+    @import './base/bootstrap-extended';
+    @import './base/colors';
+    @import './base/components';
+    // Template Themes
+    @import './base/themes/dark-layout';
+    @import './base/themes/bordered-layout';
+    @import './base/themes/semi-dark-layout';
+    @import '~@fortawesome/fontawesome-free/css/all.css';
+    @font-face {
+        //font-family: SfProDisplay;
+        font-family: TitilliumWeb;
+        //src: url('../fonts/SFPRODISPLAYREGULAR.ttf');
+        src: url('../fonts/fonts-gpsya/TitilliumWeb-Regular.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .main-menu {
+        max-height: calc(100% - 0.1px);
+        overflow-y: auto;
+        scrollbar-width: thin;
+    }
+    
+    .swal2-container {
+        padding-top: 5% !important;
+        z-index: X !important;
+    }
+    
+    .breadcrumb:not([class*="breadcrumb-"]) .breadcrumb-item+.breadcrumb-item::before {
+        background-size: 16px;
+        padding-top: 22px;
+    }
+    
+    .card {
+        position: initial;
+        display: block;
+        flex-direction: initial;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: initial;
+        border: none;
+        border-radius: 0px;
+        margin-bottom: 0rem;
+        box-shadow: none;
+    }
+    
+    .card-body {
+        padding-top: 0.125rem;
+        padding-right: 1rem;
+        padding-bottom: 0.125rem;
+        padding-left: 1rem;
+    }
+    
+    .table:not(.table-dark):not(.table-light) thead:not(.thead-dark) th,
+    .table:not(.table-dark):not(.table-light) tfoot:not(.thead-dark) th {
+        background-color: #003c82;
+        color: white;
+        font-weight: bold;
+    }
+    
+    table.dataTable thead .sorting:before,
+    table.dataTable thead .sorting_asc:before,
+    table.dataTable thead .sorting_desc:before {
+        background-image: url(str-replace(str-replace($chevron-up, 'currentColor', #ffffff), '#', '%23')) !important;
+        right: 0.5rem !important;
+    }
+    
+    table.dataTable thead .sorting:after,
+    table.dataTable thead .sorting_asc:after,
+    table.dataTable thead .sorting_desc:after {
+        background-image: url(str-replace(str-replace($chevron-down, 'currentColor', #ffffff), '#', '%23')) !important;
+        right: 0.5rem !important;
+    }
+    
+    table.dataTable thead .sorting:before,
+    table.dataTable thead .sorting_asc:before,
+    table.dataTable thead .sorting_desc:before,
+    table.dataTable thead .sorting_asc_disabled:before,
+    table.dataTable thead .sorting_desc_disabled:before {
+        content: "" !important;
+    }
+    
+    table.dataTable thead .sorting:after,
+    table.dataTable thead .sorting_asc:after,
+    table.dataTable thead .sorting_desc:after,
+    table.dataTable thead .sorting_asc_disabled:after,
+    table.dataTable thead .sorting_desc_disabled:after {
+        content: "" !important;
+    }
+    
+    //Estilos formulario
+    /*.card,
+.first-card {
+    box-shadow: 0px 3px 15px #00000029;
+    border-radius: 20px;
+    padding: 1% 2% 1% 2%;0
+}*/
+    
+    .modal-dialog {
+        padding-top: 5% !important;
+    }
+    
+    .modal-content,
+    .modal-content .modal-header {
+        border-radius: 20px;
+        padding: 1% 2% 1% 2%;
+    }
+    
+    .card-body label,
+    .form-group label,
+    .card-title,
+    .modal-title,
+    label {
+        font-weight: bold !important;
+    }
+    
+    .card-body .form-control,
+    .form-control {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: inset 0px 1px 10px #00000029;
+        border-radius: 14px;
+        border-color: #EEE;
+        font-weight: bold;
+        opacity: 1;
+    }
+    
+    .card-body .form-control[disabled],
+    .card-body .form-control[readonly] {
+        background: #CCCCCC 0% 0% no-repeat padding-box !important;
+    }
+    
+    .card-body .form-control[disabled]::placeholder,
+    .card-body .form-control[readonly]::placeholder,
+    .form-control[disabled]::placeholder,
+    .form-control[readonly]::placeholder,
+    .card-body .form-control::placeholder,
+    .form-control::placeholder {
+        color: #858585 !important;
+    }
+    
+    .card-body .form-control:hover,
+    .form-control:hover {
+        box-shadow: 0 8px 25px -8px #CCCCCC;
+    }
+    
+    .btn {
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 14px;
+    }
+    
+    .btn.btn-danger,
+    .btn.btn-primary.addTinsumo {
+        font-size: 14px !important;
+    }
+    
+    .card-header .btn-outline-secondary,
+    .btn-outline-secondary,
+    .btn-primary:not(.btn-sm) {
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 16px;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 14px;
+        opacity: 1;
+        height: 40px;
+    }
+    
+    .btn-primary:disabled,
+    .btn-primary[disabled],
+    .btn:disabled,
+    .btn[disabled] {
+        background-color: #CCCCCC !important;
+        border-color: #CCCCCC !important;
+    }
+    
+    .btn-primary {
+        float: right;
+    }
+    
+    .btn-primary.btn-block.loginBtn,
+    .btn-primary[data-toggle="modal"],
+    .auth-forgot-password-form>.btn-primary.btn-block,
+    .auth-reset-password-form>.btn-primary.btn-block {
+        float: none !important;
+    }
+    
+    .card-header .btn-primary[type="submit"] {
+        margin-left: 10px;
+    }
+    
+    .card-header .btn-outline-secondary,
+    .btn-outline-secondary {
+        background: #8B8B8B 0% 0% no-repeat padding-box;
+        border: none !important;
+    }
+    
+    .card-header .btn-outline-secondary:hover,
+    .btn-outline-secondary:hover {
+        background: #8B8B8B 0% 0% no-repeat padding-box !important;
+        box-shadow: 0 8px 25px -8px #000000d2 !important;
+        border: none !important;
+        color: #FFFFFF !important;
+    }
+    
+    .card-body .btn-secondary,
+    .btn-dark {
+        color: #FFFFFF !important;
+        border-radius: 14px;
+        font-weight: bold;
+        font-size: 16px;
+        height: 40px;
+        float: right;
+    }
+    
+    .form-group .btn-secondary {
+        margin-right: 10px;
+    }
+    
+    //Estilos de menu principal
+    .main-menu.menu-light .navigation li a {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px #ffffff;
+        color: #606060;
+        opacity: 1;
+        padding: 8.2px 15px 11.6px 15px;
+    }
+    
+    .main-menu.menu-light .navigation li a:hover {
+        background: #ececec 0% 0% no-repeat padding-box;
+        color: #606060;
+        //box-shadow: inset 10px 0 0 0 white;
+        opacity: 1;
+        border-radius: 15px 15px 15px 15px;
+    }
+    
+    .main-menu.menu-light .navigation .nav-item.has-sub.open a {
+        background: #ececec 0% 0% no-repeat padding-box;
+        color: #606060;
+        opacity: 1;
+        border-radius: 15px 15px 15px 15px;
+    }
+    
+    //Active, cuando se selecciona y da click un sub menu, pone un sombraso azul Omar 08/03/2022
+    .main-menu.menu-light .navigation .nav-item.has-sub.open .active {
+        background: #ececec 0% 0% no-repeat padding-box;
+        color: #606060;
+        opacity: 1;
+        border-radius: 15px 15px 15px 15px;
+    }
+    /*.main-menu.menu-light .navigation .nav-item.has-sub.open a .menu-item {
+    background: #CCCCCC 0% 0% no-repeat padding-box;
+    color: #606060;
+    opacity: 1;
+}*/
+    
+    .main-menu.menu-light .navigation .nav-item.has-sub.open li a {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        color: #606060;
+        opacity: 1;
+        transition: all 0.5s ease, background 0s, color 0s;
+        font-size: 13px;
+    }
+    
+    .main-menu.menu-light .navigation li.nav-item ul.menu-content li a:hover {
+        background: #ececec 0% 0% no-repeat padding-box;
+        //box-shadow: inset 15px 0 0 0 #53C6F1;
+        color: #606060;
+        opacity: 1;
+    }
+    
+    .main-menu.menu-light .navigation>li ul li>a {
+        padding: 6.2px 15px 9.6px 20px;
+    }
+    
+    .vertical-layout.vertical-menu-modern .main-menu .navigation li a:hover i,
+    .vertical-layout.vertical-menu-modern .main-menu .navigation li ul.menu-content a:hover i {
+        transform: none;
+    }
+    
+    .card-header {
+        padding: 1rem, 0rem, 1rem, 0rem;
+    }
+    
+    .first-card {
+        margin-top: 2.5%;
+    }
+    
+    .first-card-m {
+        margin-top: 9.5%;
+    }
+    
+    @media screen and (max-width: 500px) {
+        .first-card {
+            margin-top: 20%;
+        }
+    }
+    
+    .dataTable th {
+        font-size: 14px;
+    }
+    
+    .dataTable td {
+        font-size: 12px;
+    }
+    
+    .loginInputs {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        border-radius: 22px;
+        opacity: 1;
+    }
+    
+    .loginBtn {
+        background: #003c82 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 22px;
+        opacity: 1;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #FFFFFF;
+    }
+    
+    .loginCard {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: inset 0px 0px 10px #0000001C;
+        border-radius: 34px;
+        border-color: #EEE;
+        padding: 10%;
+    }
+    
+    .nav .nav-item a {
+        background: #ffffff 0% 0% no-repeat padding-box !important;
+        color: #707070 !important;
+        font-weight: bold;
+    }
+    
+    .nav-tabs .nav-item {
+        width: 50%;
+    }
+    
+    .nav-tabs .nav-item:first-child:nth-last-child(1) {
+        width: 100%;
+    }
+    
+    .nav-tabs .nav-item:first-child .nav-link {
+        border-radius: 14px 0 0 14px;
+        box-shadow: 0px 3px 15px #00000029;
+        border: 1px solid rgba(34, 41, 47, 0.125);
+    }
+    
+    .nav-tabs .nav-item:last-child .nav-link {
+        border-radius: 0 14px 14px 0;
+        box-shadow: 0px 3px 15px #00000029;
+        border: 1px solid rgba(34, 41, 47, 0.125);
+    }
+    
+    .nav-tabs .nav-item:first-child:nth-last-child(1) a {
+        border-radius: 14px 14px 14px 14px !important;
+        box-shadow: 0px 3px 15px #00000029;
+        border: 1px solid rgba(34, 41, 47, 0.125);
+    }
+    
+    .nav-tabs .nav-link.active {
+        background: #003c82 0% 0% no-repeat padding-box !important;
+        color: #FFFFFF !important;
+        font-weight: bold;
+    }
+    
+    .nav-tabs .nav-link.active:hover,
+    .nav-tabs .nav-link:hover {
+        box-shadow: 0 8px 25px -8px #000000d2 !important;
+    }
+    
+    .dropdown-item.text-center:hover {
+        box-shadow: inset -1px -1px 28px -10px #0000004b;
+        border-radius: 10px;
+    }
+    
+    .init-table {
+        margin-top: 0.5rem;
+    }
+    
+    .btn-spc {
+        margin-bottom: 17px;
+    }
+    
+    .centered {
+        text-align: center;
+        vertical-align: middle !important;
+    }
+    
+    hr {
+        margin: 0px;
+    }
+    
+    #buscarForm,
+    #newForm {
+        margin-block-end: 0rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 0.7em 0.5rem;
+    }
+    
+    table.dataTable td,
+    table.dataTable th {
+        padding: 0.7rem 0.5rem;
+    }
+    
+    .table.table-sm th:first-child,
+    .table.table-sm td:first-child {
+        padding-left: 0.25rem;
+    }
+    
+    table.dataTable thead>tr>th.sorting_asc,
+    table.dataTable thead>tr>th.sorting_desc,
+    table.dataTable thead>tr>th.sorting,
+    table.dataTable thead>tr>td.sorting_asc,
+    table.dataTable thead>tr>td.sorting_desc,
+    table.dataTable thead>tr>td.sorting {
+        padding-right: 10px;
+    }

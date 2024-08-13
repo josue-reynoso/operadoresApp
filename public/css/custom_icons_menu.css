@@ -1,0 +1,265 @@
+@charset "UTF-8";
+.iconCm {
+  background-size: cover;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  filter: grayscale(100%);
+}
+
+.iconC {
+  background-size: cover;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.menu-title,
+.menu-item {
+  color: #606060;
+}
+
+.vertical-layout.vertical-menu-modern .main-menu .navigation > li > a svg.iconCm,
+.vertical-layout.vertical-menu-modern .main-menu .navigation > li > a i.iconCm {
+  height: 23px;
+  width: 23px;
+  font-size: 1.45rem;
+  margin-right: 0.7rem;
+  flex-shrink: 0;
+}
+
+.main-menu.menu-light .navigation li a i.iconCm,
+.main-menu.menu-light .navigation li a svg.iconCm {
+  position: relative;
+  top: 3.5px;
+}
+
+.ps__rail-y {
+  height: 0px !important;
+}
+
+.iconConfig {
+  background-image: url(../images/icons_web/svg/Configuración.svg);
+}
+
+.iconStock {
+  background-image: url(../images/icons_web/svg/Stock.svg);
+}
+
+.iconPedidos {
+  background-image: url(../images/icons_web/svg/Pedidos.svg);
+}
+
+.iconCompras {
+  background-image: url(../images/icons_web/svg/Compras.svg);
+}
+
+.iconVentas {
+  background-image: url(../images/icons_web/svg/Ventas.svg);
+}
+
+.iconLiquidaciones_pagos {
+  background-image: url(../images/icons_web/svg/Liquidaciones.svg);
+}
+
+.iconSuscripciones {
+  background-image: url(../images/icons_web/svg/Suscripciones.svg);
+}
+
+.iconnNotificaciones {
+  background-image: url(../images/icons_web/svg/Notificaciones.svg);
+}
+
+.iconClientes {
+  background-image: url(../images/icons_web/svg/Clientes.svg);
+}
+
+.iconItemsClientes {
+  background-image: url(../images/icons_web/svg/IconoItemVehiculoPersonaMascota.svg);
+}
+
+.iconItemsCelular {
+  background-image: url(../images/icons_web/svg/Telefono.svg);
+}
+
+.iconPagosBancarios {
+  background-image: url(../images/icons_web/svg/Comisiones.svg);
+}
+
+.iconSubCm {
+  background-size: cover;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  filter: grayscale(100%);
+}
+
+.vertical-layout.vertical-menu-modern .main-menu .navigation > li ul.menu-content > li > a svg.iconSubCm,
+.vertical-layout.vertical-menu-modern .main-menu .navigation > li ul.menu-content > li > a i.iconSubCm {
+  height: 23px;
+  width: 23px;
+  font-size: 1.45rem;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  flex-shrink: 0;
+}
+
+.main-menu.menu-light .navigation li ul.menu-content li a i.iconSubCm,
+.main-menu.menu-light .navigation li ul.menu-content li a svg.iconSubCm {
+  position: relative;
+  top: 3.5px;
+}
+
+.iconParametros {
+  background-image: url(../images/icons_web/svg/Parámetros.svg);
+}
+
+.iconPaises {
+  background-image: url(../images/icons_web/svg/Cerrar.svg);
+}
+
+.iconEstados {
+  background-image: url(../images/icons_web/svg/Cerrar.svg);
+}
+
+.iconCiudades {
+  background-image: url(../images/icons_web/svg/Cerrar.svg);
+}
+
+.iconMarcasblancas {
+  background-image: url(../images/icons_web/svg/Marcas_blancas.svg);
+}
+
+.iconFranquicias {
+  background-image: url(../images/icons_web/svg/Franquicias.svg);
+}
+
+.iconDireccionesYCasilleros {
+  background-image: url(../images/icons_web/svg/Direcciones.svg);
+}
+
+.iconUsuarios {
+  background-image: url(../images/icons_web/svg/Perfil.svg);
+}
+
+.iconTiposinsumos {
+  background-image: url(../images/icons_web/svg/Tipos_de_insumos.svg);
+}
+
+.iconInsumos {
+  background-image: url(../images/icons_web/svg/Insumos.svg);
+}
+
+.iconTiposProductos {
+  background-image: url(../images/icons_web/svg/Tipos_de_productos.svg);
+}
+
+.iconProductos {
+  background-image: url(../images/icons_web/svg/Productos.svg);
+}
+
+.iconPedidos {
+  background-image: url(../images/icons_web/svg/Pedidos.svg);
+}
+
+.iconAuditoria {
+  background-image: url(../images/icons_web/svg/Auditoría.svg);
+}
+
+.iconDescuentos {
+  background-image: url(../images/icons_web/svg/Descuentos.svg);
+}
+
+.iconVendedores {
+  background-image: url(../images/icons_web/svg/Vendedores.svg);
+}
+
+.iconListasDePrecios {
+  background-image: url(../images/icons_web/svg/Lista_de_precioss.svg);
+}
+
+.iconCupones {
+  background-image: url(../images/icons_web/svg/Cupones.svg);
+}
+
+.iconMonedas {
+  background-image: url(../images/icons_web/svg/Monedas.svg);
+}
+
+.iconImpuestos {
+  background-image: url(../images/icons_web/svg/Impuestos.svg);
+}
+
+.iconCouriers {
+  background-image: url(../images/icons_web/svg/Couries.svg);
+}
+
+.iconCompras {
+  background-image: url(../images/icons_web/svg/Compras.svg);
+}
+
+.iconSuscripciones {
+  background-image: url(../images/icons_web/svg/Suscripciones.svg);
+}
+
+.iconNotificaciones {
+  background-image: url(../images/icons_web/svg/Notificaciones.svg);
+}
+
+.iconRecepcionInsumosProductos {
+  background-image: url(../images/icons_web/svg/Cerrar.svg);
+}
+
+.iconVehiculos {
+  background-image: url(../images/icons_web/svg/Vehículos.svg);
+}
+
+.redSVG {
+  filter: invert(23%) sepia(33%) saturate(5467%) hue-rotate(346deg) brightness(83%) contrast(135%);
+}
+
+.orangeSVG {
+  filter: invert(77%) sepia(56%) saturate(6248%) hue-rotate(349deg) brightness(100%) contrast(97%);
+}
+
+.darkBlueSVG {
+  filter: invert(21%) sepia(99%) saturate(2243%) hue-rotate(183deg) brightness(87%) contrast(101%);
+}
+
+.navyBlueSVG {
+  filter: invert(17%) sepia(31%) saturate(5312%) hue-rotate(200deg) brightness(93%) contrast(102%);
+}
+
+.greenSVG {
+  filter: invert(40%) sepia(88%) saturate(1155%) hue-rotate(105deg) brightness(98%) contrast(103%);
+}
+
+.darkGreenSVG {
+  filter: invert(29%) sepia(53%) saturate(5346%) hue-rotate(140deg) brightness(102%) contrast(101%);
+}
+
+.ligthGraySVG {
+  filter: invert(86%) sepia(8%) saturate(0%) hue-rotate(229deg) brightness(96%) contrast(90%);
+}
+
+.graySVG {
+  filter: invert(61%) sepia(1%) saturate(202%) hue-rotate(11deg) brightness(97%) contrast(93%);
+}
+
+.darkGraySVG {
+  filter: invert(24%) sepia(0%) saturate(52%) hue-rotate(146deg) brightness(83%) contrast(87%);
+}
+
+.blackSVG {
+  filter: invert(0%) sepia(0%) saturate(7465%) hue-rotate(330deg) brightness(105%) contrast(109%);
+}
+
+.whiteSVG {
+  filter: invert(100%) sepia(0%) saturate(28%) hue-rotate(93deg) brightness(106%) contrast(111%);
+}

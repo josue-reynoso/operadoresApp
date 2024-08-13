@@ -1,0 +1,101 @@
+.auth-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+}
+.auth-wrapper .auth-inner {
+  width: 100%;
+  position: relative;
+}
+.auth-wrapper.auth-v1 {
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url("../../../images/pages/login/loginBackground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.auth-wrapper.auth-v1 .auth-inner:before {
+  width: 244px;
+  height: 243px;
+  content: " ";
+  position: absolute;
+  top: -54px;
+  left: -46px;
+}
+@media (max-width: 575.98px) {
+  .auth-wrapper.auth-v1 .auth-inner:before {
+    display: none;
+  }
+}
+.auth-wrapper.auth-v1 .auth-inner:after {
+  width: 272px;
+  height: 272px;
+  content: " ";
+  position: absolute;
+  bottom: -55px;
+  right: -75px;
+  z-index: -1;
+}
+@media (max-width: 575.98px) {
+  .auth-wrapper.auth-v1 .auth-inner:after {
+    display: none;
+  }
+}
+.auth-wrapper.auth-v1 .auth-inner .auth-login-form,
+.auth-wrapper.auth-v1 .auth-inner .auth-forgot-password-form {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+.auth-wrapper.auth-v2 {
+  align-items: flex-start;
+}
+.auth-wrapper.auth-v2 .auth-inner {
+  height: 100vh;
+  overflow-y: auto;
+  height: calc(var(--vh, 1vh) * 100);
+}
+.auth-wrapper.auth-v2 .brand-logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  margin: 0;
+  z-index: 1;
+}
+.auth-wrapper.auth-v1 .auth-inner {
+  max-width: 400px;
+}
+.auth-wrapper .card-title {
+  font-size: medium;
+  font-weight: bold;
+}
+.auth-wrapper .brand-logo {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 2rem 0;
+}
+.auth-wrapper .brand-logo .brand-text {
+  font-weight: 600;
+}
+.auth-wrapper .auth-footer-btn .btn {
+  padding: 0.6rem !important;
+}
+.auth-wrapper .auth-footer-btn .btn:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .auth-wrapper.auth-v2 .auth-card {
+    width: 400px;
+  }
+}
+.auth-wrapper .auth-bg {
+  background-color: #fff;
+}
+
+.dark-layout .auth-wrapper .auth-bg {
+  background-color: #283046;
+}
