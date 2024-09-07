@@ -18,6 +18,8 @@ class Operadores extends Model
         'OP_Cel',
         'OP_Email',
         'OP_Status',
+        'OP_ID_R',
+        'IP_DC_ID',
 
 
     ];

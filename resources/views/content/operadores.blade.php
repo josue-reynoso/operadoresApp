@@ -86,12 +86,10 @@
                             <th class="dt-no-export no-sort" style="width: 0%;"></th>
                             <th style="width: 3%;">{{ __('messages.id') }}</th>
                             <th style="width: 20%;">{{ __('messages.nombre') }}</th>
-                            <th style="width: 20%;">{{ __('messages.apellido') }}</th>
-                            <th style="width: 20%;">{{ __('messages.fecha_nacimiento') }}</th>
                             <th style="width: 10%;">{{ __('messages.telefono') }}</th>
                             <th style="width: 15%;">{{ __('messages.direccion') }}</th>
-                            <th style="width: 15%;">{{ __('messages.correo') }}</th>
                             <th style="width: 5%;">{{ __('messages.estado') }}</th>
+                            <th style="width:5%">{{__('messages.detalles')}} </th>
                         </tr>
                     </thead>
                 </table>
@@ -102,13 +100,18 @@
 @include('panels/dataTableDetalles')
 
 @stop
-
-@section('js')
 <script>
+    console.log("init ......"); 
     window.onload = function() {
-
+        init2();
+        
     };
+    function init2(){
+        $("#buscarFormBtn" ).trigger( "click" );   
+    }
 </script>
+@section('js')
+
 
 @stop
 

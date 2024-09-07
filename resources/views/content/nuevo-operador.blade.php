@@ -3,6 +3,10 @@
 @section('content')
 
 @php $obj = $results->objPorEditar; @endphp
+@php $rutas = $results->rutas; @endphp
+@php $comen = $results->comentarios; @endphp
+
+
 
 <style>
     .btn-primary.disabled, .btn-primary:disabled {
@@ -125,6 +129,18 @@
 
                         <div class="col-sm-3">
                             <div class="form-group">
+                                <label for="OP_ID_R">{!!__('messages.ruta')!!}:</label>
+                                <select class="form-control @error('OP_ID_R') is-invalid @enderror"  id="OP_ID_R" name="OP_ID_R" value="{{ old('OP_ID_R') ?: ($obj!==null? $obj->OP_ID_R : '') }}" required>
+                                    <option value="">{!!__('messages.seleccione_opcion')!!}</option>
+                                    @foreach ($rutas as $r)
+                                        <option value="{{$r->R_ID}}" {{ $obj->OP_ID_R == $r->R_ID ? 'selected' : '' }}>{{$r->R_Color}} {{$r->R_Numero}}{{$r->R_Letra}} </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="form-group">
                                 <label for="OP_Status">{!!__('messages.estado')!!}:</label>
                                 <select class="form-control @error('OP_Status') is-invalid @enderror" id="OP_Status" name="OP_Status">
                                     <option value="1" {{ $obj->OP_Status == '1' ? 'selected' : '' }}>{!!__('messages.activo')!!}</option>
@@ -133,12 +149,54 @@
                             </div>
                         </div>
 
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="COM_DES">{!!__('messages.comentario_nuevo')!!}:</label>
+                                <textarea cols="4" type="text" class="form-control @error('COM_DES') is-invalid @enderror" 
+                                autocomplete="false" id="COM_DES" name="COM_DES" value="" placeholder="" maxlength="255"></textarea>
+                                
+                            </div>
+                        </div>
+
+
+                        
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </form>
+@endif
+
+@if($obj->OP_ID > 0)
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <table id="resultsDataTable"  class="table">
+                    <thead>
+                        <tr>
+                            <th class="dt-no-export no-sort" style="width: 0%;"></th>
+                            <th style="width: 70%;">{{ __('messages.comentarios') }}</th>
+                            <th style="width:30%">{{__('messages.fecha_emision')}} </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($comen as $c)
+                        <tr>
+                            <th></th>
+                            <th style="font-weight:normal">{{$c->COM_DES}}</th>
+                            <th style="font-weight:normal">{{date('d-m-Y H:i:s', strtotime($c->created_at))}}</th>
+                        </tr>
+
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 @endif
 
 
@@ -149,12 +207,12 @@
 <script>
     window.onload = function() {
 
-validateForm();
-$('input:text').each(function() {
-    $(this).keyup(function() {
-        validateForm()
-    })
-});
+    validateForm();
+    $('input:text').each(function() {
+        $(this).keyup(function() {
+            validateForm()
+        })
+    });
 
 
 };
