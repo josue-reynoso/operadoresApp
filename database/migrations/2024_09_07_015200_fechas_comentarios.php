@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         //
-        DB::unprepared("ALTER TABLE `operadores`.`comentarios`   
+        DB::unprepared("ALTER TABLE `comentarios`   
   ADD COLUMN `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP AFTER `COM_DATE`,
 ADD COLUMN `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP AFTER `created_at`;");
     }

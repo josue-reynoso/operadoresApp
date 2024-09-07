@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         //
-        DB::unprepared("ALTER TABLE `operadores`.`operadores`   
+        DB::unprepared("ALTER TABLE `operadores`   
                       ADD COLUMN `IP_DC_ID` INT(11) NULL AFTER `OP_ID_R`;");
     }
 

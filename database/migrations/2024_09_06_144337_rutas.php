@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         //
-        DB::unprepared("CREATE TABLE `operadores`.`rutas`(  
+        DB::unprepared("CREATE TABLE `rutas`(  
                         `R_ID` INT NOT NULL AUTO_INCREMENT,
                         `R_Color` VARCHAR(255),
                         `R_Numero` INT,
