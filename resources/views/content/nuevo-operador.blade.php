@@ -4,7 +4,12 @@
 
 @php $obj = $results->objPorEditar; @endphp
 @php $rutas = $results->rutas; @endphp
-@php $comen = $results->comentarios; @endphp
+@php 
+$comen;
+if($obj->OP_ID>0){
+    $comen= $results->comentarios;
+}  
+@endphp
 
 
 
@@ -47,8 +52,7 @@
                 @php session()->forget('errors'); @endphp
                 @endif
                 <div class="card-header">
-                    <h4 class="card-title">{{$results->titulo}}</h4>
-
+                    <h4 class="card-title" style="font-weight: bold">{{$results->titulo}}</h4>
                     <div style="text-align: right !important">
 
                         <a href="{{ route('operadores') }}" class="btn btn-outline-secondary">{!! __('messages._r') !!}</a>
@@ -120,7 +124,7 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label for="OP_Email">{!!__('messages.correo')!!}:</label>
-                                <input type="text" class="form-control @error('OP_Email') is-invalid @enderror" autocomplete="false" id="OP_Email" name="OP_Email" value="{{ old('OP_Email') ?: ($obj!==null? $obj->OP_Email : '') }}" placeholder="" maxlength="55" />
+                                <input type="text" class="form-control @error('OP_Email') is-invalid @enderror" autocomplete="false" id="OP_Email" name="OP_Email" value="{{ old('OP_Email') ?: ($obj!==null? $obj->OP_Email : '') }}" placeholder="" maxlength="55" required />
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{!!__('messages.campo_requerido_o_formato_invalido')!!}</strong>
                                 </span>
@@ -156,6 +160,17 @@
                                 autocomplete="false" id="COM_DES" name="COM_DES" value="" placeholder="" maxlength="255"></textarea>
                                 
                             </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                           
+                        </div>
+                        <div class="col-sm-3">
+                           
+                        </div>
+                        <div class="col-sm-3">
+                            <span style="text-align: left !important; color:red; font-weight: bold; font-size: 10px; position: absolute;">En caso de no tener un dato poner un *</span>
+                    
                         </div>
 
 
