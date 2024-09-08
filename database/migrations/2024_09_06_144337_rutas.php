@@ -23,11 +23,11 @@ return new class extends Migration
                         PRIMARY KEY (`R_ID`)
                         ) ENGINE=INNODB;
                         ");
-        DB::unprepared("ALTER TABLE `operadores`.`operadores`   
+        DB::unprepared("ALTER TABLE `operadores`   
                 ADD COLUMN `OP_ID_R` INT(11) NOT NULL 
                  COMMENT 'ruta actual' AFTER `OP_Status`;");
 
-        DB::unprepared("CREATE TABLE `operadores`.`documentos`(  
+        DB::unprepared("CREATE TABLE `documentos`(  
                         `DC_ID` INT NOT NULL AUTO_INCREMENT,
                         `DC_Nombre` VARCHAR(255),
                         `DC_Path` VARCHAR(255),
