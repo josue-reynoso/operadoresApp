@@ -124,7 +124,7 @@ if($obj->OP_ID>0){
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label for="OP_Email">{!!__('messages.correo')!!}:</label>
-                                <input type="text" class="form-control @error('OP_Email') is-invalid @enderror" autocomplete="false" id="OP_Email" name="OP_Email" value="{{ old('OP_Email') ?: ($obj!==null? $obj->OP_Email : '') }}" placeholder="" maxlength="55" required />
+                                <input type="text" class="form-control @error('OP_Email') is-invalid @enderror" autocomplete="false" id="OP_Email" name="OP_Email" value="{{ old('OP_Email') ?: ($obj!==null? $obj->OP_Email : '') }}" placeholder="" maxlength="55" />
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{!!__('messages.campo_requerido_o_formato_invalido')!!}</strong>
                                 </span>
@@ -134,7 +134,7 @@ if($obj->OP_ID>0){
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label for="OP_ID_R">{!!__('messages.ruta')!!}:</label>
-                                <select class="form-control @error('OP_ID_R') is-invalid @enderror"  id="OP_ID_R" name="OP_ID_R" value="{{ old('OP_ID_R') ?: ($obj!==null? $obj->OP_ID_R : '') }}" required>
+                                <select class="form-control @error('OP_ID_R') is-invalid @enderror"  id="OP_ID_R" name="OP_ID_R" value="{{ old('OP_ID_R') ?: ($obj!==null? $obj->OP_ID_R : '') }}" required onChange="validateForm();">
                                     <option value="">{!!__('messages.seleccione_opcion')!!}</option>
                                     @foreach ($rutas as $r)
                                         <option value="{{$r->R_ID}}" {{ $obj->OP_ID_R == $r->R_ID ? 'selected' : '' }}>{{$r->R_Color}} {{$r->R_Numero}}{{$r->R_Letra}} </option>
@@ -228,6 +228,8 @@ if($obj->OP_ID>0){
             validateForm()
         })
     });
+
+
 
 
 };
